@@ -14,7 +14,9 @@ class Home extends Component {
   componentDidMount() {
     getAlbums().then(response => {
       console.log(response.data)
-      this.setState({albums: response.data})
+      if (response.data.success) {
+        this.setState({albums: response.data.data})
+      }
       console.log('albums', this.state.albums)
     })
   }
@@ -22,7 +24,16 @@ class Home extends Component {
   render() {
     return(
       <div className="main-container">
-        <p>wpoef</p>
+        {
+          this.state.albums.map((elem, i) => {
+            return (
+              <div key={i}>
+                <p>{elem.id}</p>
+              </div>
+            )
+          })
+        }
+        {/* <p>wpoef</p> */}
         
       </div>
     );
