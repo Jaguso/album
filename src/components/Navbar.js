@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import './Navbar.css'
 
-
-class Toolbar extends Component {
+class Navbar extends Component {
   render() {
     return(
-      <div className="">
+      <div className="navbar">
         <p>sodifj</p>
       </div>
     );
   }
 }
 
-export default Toolbar;
+export default Navbar;
