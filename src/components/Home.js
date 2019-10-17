@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
+import AlbumCard from './AlbumCard';
 import { getAlbums } from '../services';
 
 
@@ -18,6 +19,7 @@ class Home extends Component {
         this.setState({albums: response.data.data})
       }
       console.log('albums', this.state.albums)
+      console.log(this.state.albums.map(item => item.id))
     })
   }
 
@@ -25,15 +27,17 @@ class Home extends Component {
     return(
       <div className="main-container">
         {
-          this.state.albums.map((elem, i) => {
-            return (
-              <div key={i}>
-                <p>{elem.id}</p>
-              </div>
-            )
-          })
-        }
-        {/* <p>wpoef</p> */}
+          this.state.albums.map((item, i) => (
+            <div key={i}>
+              <AlbumCard
+                id={item.id}
+                cover={item.cover_url}
+                name={item.name}
+                number={item.images_count}
+                hard_cover={item.hard_cover}
+              />
+            </div>
+        ))}
         
       </div>
     );
