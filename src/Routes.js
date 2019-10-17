@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Album from './components/Album/Album';
 
 class Routes extends Component {
   render() {
@@ -11,6 +12,7 @@ class Routes extends Component {
         <main>
           <Navbar/>
           <Route exact path="/" component={Home}/>
+          <Route exact path="/albums/:id" component={Album}/>
         </main>
       </BrowserRouter>
     );
