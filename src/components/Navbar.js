@@ -5,7 +5,12 @@ class Navbar extends Component {
   render() {
     return(
       <div className="navbar">
-        <p>sodifj</p>
+        <div className="pix">
+          <p>pixyalbum</p>
+        </div>
+        <div className="prod">
+          <p>PRODUCTS</p>
+        </div>
       </div>
     );
   }
