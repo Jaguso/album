@@ -1,0 +1,11 @@
+.cover-photo-container {
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.book-container {
+  display: flex;
+}

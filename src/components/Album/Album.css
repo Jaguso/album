@@ -1,14 +1,22 @@
+
+
 .album-container {
-  margin-top: 60px;
+  margin: 60px 20px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .image-left {
-  background-color: red;
+  margin: 20px  0px 20px 20px;
+  /* background-color: red; */
+  padding: 20px;
+  border: solid 1px;
+  border-color: blue; 
 }
 
 .image-right {
+  margin: 20px  20px 20px 0px;
+  padding: 20px;
   background-color: blue;
 }
