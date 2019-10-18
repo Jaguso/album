@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './AlbumCard.css'
 
 class AlbumCard extends Component {
   render() {
@@ -11,13 +11,15 @@ class AlbumCard extends Component {
             alt="album"
             height="200"  
             width="200"
-            
           />
-          <p>id: {this.props.id}</p>
-          <p>{this.props.name}</p>
-          <p>{this.props.number} fotos</p>
-          <p>{this.props.hard_cover ? 'Pasta dura': 'Pasta suave'}</p>
         </a>
+        <div className="under-data">
+          {/* <p>id: {this.props.id}</p> */}
+          <p className="name">{this.props.name}</p>
+          <p className="number">{this.props.number} fotos</p>
+          <p className="type">{this.props.hard_cover ? 'Pasta dura': 'Pasta suave'}</p>
+        </div>
+        
       </div>
     );
   }
