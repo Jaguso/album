@@ -7,7 +7,7 @@ function CoverPhoto(props) {
     <div className="cover-photo-container">
       <div className="book-container">
         <div className="left-page">
-          
+          <p>pixyalbum</p>
         </div>
         <div className="fight-page">
           <img

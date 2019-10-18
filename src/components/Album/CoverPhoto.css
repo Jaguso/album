@@ -8,13 +8,17 @@
 
 .book-container {
   display: flex;
-  /* background-color: blue; */
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .left-page {
   width: 200px;
   border: solid 1px;
   border-color: rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: rgba(0,0,0,0.5);
 }
 
 .right-page {
@@ -31,4 +35,5 @@ button {
   color: green;
   border-radius: 5px;
   border-color: green;
+  cursor: pointer;
 }

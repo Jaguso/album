@@ -7,7 +7,7 @@ function PhotoCard(props) {
       <img
         src={props.image}
         alt="photo"
-        height="110"  
+        height="110"
         width="150"
       />
       
