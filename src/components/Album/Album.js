@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Photo from './Photo';
+import PhotoCard from './PhotoCard';
 import { getAlbumPictures } from '../../services';
+import './Album.css'
 
 class Album extends Component {
   constructor(props){
@@ -24,18 +25,13 @@ class Album extends Component {
 
   render() {
     return(
-      <div>
+      <div className="album-container">
         {
           this.state.photos.map((item, i) => (
-            <div key={i}>
-              <img
-                src={item.image_url}
-                width={item.width}
-                height={item.height}
+            <div key={i} className={i%2 === 0 ? 'image-left' : 'image-right'}>
+              <PhotoCard
+                image={item.image_url}
               />
-              {/* <img
-                src={item.print_url}
-              /> */}
             </div>
         ))}
 
