@@ -6,10 +6,10 @@ function CoverPhoto(props) {
   return (
     <div className="cover-photo-container">
       <div className="book-container">
-        <div>
-          <p>sdoijf</p>
+        <div className="left-page">
+          
         </div>
-        <div>
+        <div className="fight-page">
           <img
             src={props.photo}
             alt="photo"
@@ -18,6 +18,9 @@ function CoverPhoto(props) {
           />
         </div>
 
+      </div>
+      <div className="button-container">
+        <button>Cambiar portada</button>
       </div>
 
     </div>

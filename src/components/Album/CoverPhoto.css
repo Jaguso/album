@@ -8,4 +8,27 @@
 
 .book-container {
   display: flex;
+  /* background-color: blue; */
+}
+
+.left-page {
+  width: 200px;
+  border: solid 1px;
+  border-color: rgba(0,0,0,0.1);
+}
+
+.right-page {
+  width: 200px;
+}
+
+.button-container {
+  margin: 20px;
+}
+
+button {
+  height: 50px;
+  font-size: 20px;
+  color: green;
+  border-radius: 5px;
+  border-color: green;
 }
