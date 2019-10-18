@@ -18,6 +18,7 @@ class AlbumCard extends Component {
           <p className="name">{this.props.name}</p>
           <p className="number">{this.props.number} fotos</p>
           <p className="type">{this.props.hard_cover ? 'Pasta dura': 'Pasta suave'}</p>
+          <p className="delete">Eliminar</p>
         </div>
         
       </div>

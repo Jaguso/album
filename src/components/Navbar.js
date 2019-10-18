@@ -6,7 +6,9 @@ class Navbar extends Component {
     return(
       <div className="navbar">
         <div className="pix">
-          <p>pixyalbum</p>
+          <a href="/">
+            <p>pixyalbum</p>
+          </a>
         </div>
         <div className="prod">
           <p>PRODUCTS</p>
