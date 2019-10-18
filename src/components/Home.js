@@ -2,31 +2,36 @@ import React, { Component } from 'react';
 import './Home.css';
 import AlbumCard from './AlbumCard';
 import { getAlbums } from '../services';
-
+import ReactLoading from 'react-loading';
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
-      albums: []
+      albums: [],
+      isLoading: true
     }
   }
 
   componentDidMount() {
     getAlbums().then(response => {
-      console.log(response.data)
       if (response.data.success) {
-        this.setState({albums: response.data.data})
+        this.setState({
+          albums: response.data.data,
+          isLoading: false
+        })
       }
-      console.log('albums', this.state.albums)
-      console.log(this.state.albums.map(item => item.id))
     })
   }
 
   render() {
     return(
       <div className="main-container">
-        {
+        {this.state.isLoading ? 
+          <div style={{height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <ReactLoading type={"spin"} color={'gray'} height={'5%'} width={'5%'} />
+          </div>
+        :
           this.state.albums.map((item, i) => (
             <div key={i}>
               <AlbumCard
